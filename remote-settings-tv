@@ -7,7 +7,7 @@ After=network-online.target
 Type=notify
 Environment=RCLONE_CONFIG=/opt/rclone/rclone.conf
 
-ExecStart=/usr/bin/rclone mount gd-tv: /GD \
+ExecStart=/usr/bin/rclone mount gd-tv: /GDTV \
 --allow-other \
 --dir-cache-time 96h \
 --drive-chunk-size 32M \
@@ -16,7 +16,7 @@ ExecStart=/usr/bin/rclone mount gd-tv: /GD \
 --timeout 1h \
 --umask 002 \
 --rc
-ExecStop=/bin/fusermount -uz /GD
+ExecStop=/bin/fusermount -uz /GDTV
 Restart=on-failure
 User=root
 Group=root
