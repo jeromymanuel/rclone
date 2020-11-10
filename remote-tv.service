@@ -7,12 +7,12 @@ After=network-online.target
 Type=notify
 Environment=RCLONE_CONFIG=/opt/rclone/rclone.conf
 
-ExecStart=/usr/bin/rclone mount gd-tv: /GDTV \
+ExecStart=/usr/bin/rclone mount gdrivetv: /GDTV \
 --allow-other \
 --dir-cache-time 96h \
 --drive-chunk-size 32M \
 --log-level INFO \
---log-file /opt/rclone/logs/rclone.log \
+--log-file /opt/rclone/logs2/rclone.log \
 --timeout 1h \
 --umask 002 \
 --rc
