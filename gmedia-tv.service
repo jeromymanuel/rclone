@@ -5,7 +5,7 @@ After=network-online.target
 
 [Service]
 Type=notify
-Environment=RCLONE_CONFIG=/opt/rclone/rclone2/rclone.conf
+Environment=RCLONE_CONFIG=/opt/rclone/rclone.conf
 
 ExecStart=/usr/bin/rclone mount gdrive2: \
 --allow-other \
@@ -16,7 +16,7 @@ ExecStart=/usr/bin/rclone mount gdrive2: \
 --timeout 1h \
 --umask 002 \
 --rc \
-mvplexTV: /GDTV
+/GDTV
 ExecStop=/bin/fusermount -uz /GDTV
 Restart=on-failure
 User=root
