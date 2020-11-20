@@ -15,7 +15,7 @@ ExecStart=/usr/bin/rclone mount gdrive2: \
 --log-file /opt/rclone/rclone2/logs/rclone.log \
 --timeout 1h \
 --umask 002 \
---rc
+--rc \
 mvplexTV: /GDTV
 ExecStop=/bin/fusermount -uz /GDTV
 Restart=on-failure
